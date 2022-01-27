@@ -1,7 +1,5 @@
 package com.company.Mathieu;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.util.List;
 import java.util.TreeMap;
 
@@ -23,7 +21,7 @@ public class Main {
         ICountSymptoms countSymptoms = new CountSymptoms();
         tSymptomsMap = countSymptoms.countSymptoms(symptoms);
 
-        IwriteOut iwriteOut = new WriteToOutFile();
+        IwriteOut iwriteOut = new WriteToOutFile("result.out");
         iwriteOut.iWriteSymptoms(tSymptomsMap);
     }
 }
