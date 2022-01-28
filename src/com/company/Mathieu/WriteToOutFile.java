@@ -12,7 +12,6 @@ public class WriteToOutFile implements IwriteOut {
     public WriteToOutFile(String fileOut) {
         this.fileOut=fileOut;
     }
-
     /**
      * Read all key and value from TreeMap
      * Get key, get value and write them in a file name result.out
@@ -26,10 +25,12 @@ public class WriteToOutFile implements IwriteOut {
                 Integer value = entry.getValue();
                 fw.write("File 'symptoms.txt' has: " + Key + " = " + value + System.lineSeparator());
             }
+                fw.write("Total symptoms= " + tsortMap.size()+System.lineSeparator());
+                fw.write("Total occurencies= ");
                 fw.close();
-            File file = new File(fileOut);
-            System.out.println("The file has been successfully analyzed");
-            System.out.println("the external file ---> "+file.getAbsoluteFile()+" <---");
+                File file = new File(fileOut);
+                System.out.println("The file has been successfully analyzed");
+                System.out.println("the external file ---> " + file.getAbsoluteFile() + " <---");
         } catch (IOException e) {
             System.err.println("Error IO: " + e.getMessage());
         }
