@@ -20,6 +20,8 @@ public class CountSymptoms implements ICountSymptoms{
             int value=tSymptomMap.getOrDefault(s ,0)+1;
             tSymptomMap.put(s, value);
         });
+        System.out.println("Total symptom = " + tSymptomMap.size());
+        System.out.println("Total occurencies = " + result.size());
         return tSymptomMap;
     }
 }
