@@ -21,5 +21,5 @@ File 'symptoms.txt' has: stiff neck = 4
 File 'symptoms.txt' has: stomach pain = 3
 File 'symptoms.txt' has: tremor = 4
 File 'symptoms.txt' has: water retention = 1
-Total symptoms= 23
-Total occurencies= 
+Total symptoms = 23
+Total occurencies = [5, 3, 1, 5, 3, 6, 4, 5, 8, 7, 3, 10, 7, 4, 4, 5, 1, 4, 3, 4, 3, 4, 1]
