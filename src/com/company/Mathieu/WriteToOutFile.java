@@ -23,7 +23,7 @@ public class WriteToOutFile implements IwriteOut {
             for (Map.Entry<String, Integer> entry : tsortMap.entrySet()) {
                 String Key = entry.getKey();
                 Integer value = entry.getValue();
-                fw.write("File 'symptoms.txt' has: " + Key + " = " + value + "\n\n");
+                fw.write("File 'symptoms.txt' has: " + Key + " = " + value + System.lineSeparator());
             }
             fw.close();
             System.out.println("The file has been successfully analyzed");
@@ -31,7 +31,6 @@ public class WriteToOutFile implements IwriteOut {
             e.printStackTrace();
         }
     }
-
 }
 
 

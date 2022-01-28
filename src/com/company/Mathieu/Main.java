@@ -13,15 +13,14 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        List<String> symptoms;
-        ISymptomFromDateFile symptomReader= new ReadSymptomFromDataFile("symptoms.txt");
-        symptoms = symptomReader.getSymptoms();
-        TreeMap<String, Integer> tSymptomsMap;
 
-        ICountSymptoms countSymptoms = new CountSymptoms();
-        tSymptomsMap = countSymptoms.countSymptoms(symptoms);
+        ReadSymptomFromDataFile symptomReader = new ReadSymptomFromDataFile("symptoms.txt");
+        List<String> symptoms = symptomReader.getSymptoms();
 
-        IwriteOut iwriteOut = new WriteToOutFile("result.out");
-        iwriteOut.iWriteSymptoms(tSymptomsMap);
+        CountSymptoms countSymptoms = new CountSymptoms();
+        TreeMap<String, Integer> tSymptomsMap = countSymptoms.countSymptoms(symptoms);
+
+        WriteToOutFile writeOut = new WriteToOutFile("result.out");
+        writeOut.iWriteSymptoms(tSymptomsMap);
     }
 }
