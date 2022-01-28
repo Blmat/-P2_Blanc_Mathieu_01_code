@@ -13,7 +13,6 @@ public class Main {
      */
     public static void main(String[] args) {
 
-
         ReadSymptomFromDataFile symptomReader = new ReadSymptomFromDataFile("symptoms.txt");
         List<String> symptoms = symptomReader.getSymptoms();
 

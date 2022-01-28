@@ -11,7 +11,6 @@ import java.util.TreeMap;
  * <p>
  * Else: add symptoms and an occurrence(value) of 1 in the map
  */
-
 public class CountSymptoms implements ICountSymptoms{
     @Override
     public TreeMap<String, Integer> countSymptoms(List<String> result) {
