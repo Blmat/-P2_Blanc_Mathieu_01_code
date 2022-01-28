@@ -1,5 +1,6 @@
 package com.company.Mathieu;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
@@ -25,10 +26,12 @@ public class WriteToOutFile implements IwriteOut {
                 Integer value = entry.getValue();
                 fw.write("File 'symptoms.txt' has: " + Key + " = " + value + System.lineSeparator());
             }
-            fw.close();
+                fw.close();
+            File file = new File(fileOut);
             System.out.println("The file has been successfully analyzed");
+            System.out.println("the external file ---> "+file.getAbsoluteFile()+" <---");
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Error IO: " + e.getMessage());
         }
     }
 }
