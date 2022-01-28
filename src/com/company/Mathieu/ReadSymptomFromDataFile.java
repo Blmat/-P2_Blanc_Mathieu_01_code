@@ -23,7 +23,7 @@ public class ReadSymptomFromDataFile implements ISymptomFromDateFile {
     public List<String> getSymptoms() {
         List<String> result = new ArrayList<>();
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(this.filepath));
+            BufferedReader reader = new BufferedReader(new FileReader(filepath));
             String line = reader.readLine();
             while (line != null) {
                 result.add(line);
