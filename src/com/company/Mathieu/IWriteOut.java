@@ -8,5 +8,5 @@ import java.util.Map;
  * @param tsortMap read the map, get key and value and write in a file result.out
  */
 public interface IWriteOut {
-    void writeSymptoms(Map<String, Integer> tsortMap);
+    void writeSymptoms(Map<String, Integer> sortMap);
 }

@@ -10,6 +10,9 @@ public class WriteToOutFile implements IWriteOut {
     private String fileOut;
 
     public WriteToOutFile(String fileOut) {
+        if (fileOut.isEmpty()) {
+            throw new IllegalArgumentException("filepath cannot be empty");
+        }
         this.fileOut = fileOut;
     }
 
@@ -18,10 +21,10 @@ public class WriteToOutFile implements IWriteOut {
      * Get key, get value and write them in a file name result.out
      */
     @Override
-    public void writeSymptoms(Map<String, Integer> tSortMap) {
+    public void writeSymptoms(Map<String, Integer> sortMap) {
         try {
             FileWriter fw = new FileWriter(fileOut);
-            tSortMap.forEach((key, value) -> {
+            sortMap.forEach((key, value) -> {
                 try {
                     fw.write("Symtpoms: " + key + " = " + value + System.lineSeparator());
                 } catch (IOException ex) {

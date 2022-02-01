@@ -18,6 +18,9 @@ public class ReadSymptomFromDataFile implements ISymptomFromDateFile {
      *                 strings in it, one per line
      */
     public ReadSymptomFromDataFile(String filepath) {
+        if (filepath.isEmpty()) {
+            throw new IllegalArgumentException("filepath cannot be empty");
+        }
         this.filepath = filepath;
     }
 
