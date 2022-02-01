@@ -1,7 +1,7 @@
 package com.company.Mathieu;
 
 import java.util.List;
-import java.util.TreeMap;
+import java.util.Map;
 /**
  *
  * Sort a list and count occurrence
@@ -13,5 +13,5 @@ public interface ICountSymptoms {
      *
      * @return a list of symptoms with occurrence, sort alphabetically and avoiding overlap
      */
-    TreeMap<String, Integer> countSymptoms(List<String> result);
+    Map<String, Integer> countSymptoms(List<String> result);
 }

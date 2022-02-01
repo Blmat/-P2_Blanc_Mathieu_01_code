@@ -10,14 +10,13 @@ import java.util.List;
  * Simple brute force implementation
  * Access to data file and return the result in a list
  */
-
 public class ReadSymptomFromDataFile implements ISymptomFromDateFile {
     private String filepath;
 
-                            /**
-                             * @param filepath a full or partial path to file with symptom strings in it, one per line
-                             */
-
+    /**
+     * @param filepath a full or partial path to file with symptom
+     *                 strings in it, one per line
+     */
     public ReadSymptomFromDataFile(String filepath) {
         this.filepath = filepath;
     }
@@ -26,15 +25,16 @@ public class ReadSymptomFromDataFile implements ISymptomFromDateFile {
     public List<String> getSymptoms() {
         List<String> result = new ArrayList<>();
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(this.filepath));
+            BufferedReader reader = new BufferedReader(new FileReader(filepath));
             String line = reader.readLine();
             while (line != null) {
                 result.add(line);
                 line = reader.readLine();
             }
             reader.close();
+            System.out.println("The file " + filepath + " has been read.");
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("File not found or Error IO: " + e.getMessage());
         }
         return result;
     }

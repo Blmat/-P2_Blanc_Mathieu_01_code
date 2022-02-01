@@ -1,9 +1,7 @@
 package com.company.Mathieu;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.util.List;
-import java.util.TreeMap;
+import java.util.Map;
 
 public class Main {
     /**
@@ -15,15 +13,13 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        List<String> symptoms;
-        ISymptomFromDateFile symptomReader= new ReadSymptomFromDataFile("symptoms.txt");
-        symptoms = symptomReader.getSymptoms();
-        TreeMap<String, Integer> tSymptomsMap;
+        ISymptomFromDateFile readSymptomFromDataFile = new ReadSymptomFromDataFile("symptoms.txt");
+        List<String> symptoms = readSymptomFromDataFile.getSymptoms();
 
         ICountSymptoms countSymptoms = new CountSymptoms();
-        tSymptomsMap = countSymptoms.countSymptoms(symptoms);
+        Map<String, Integer> tSymptomsMap = countSymptoms.countSymptoms(symptoms);
 
-        IwriteOut iwriteOut = new WriteToOutFile();
-        iwriteOut.iWriteSymptoms(tSymptomsMap);
+        IWriteOut writeOut = new WriteToOutFile("result.out");
+        writeOut.writeSymptoms(tSymptomsMap);
     }
 }
