@@ -6,14 +6,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-/**
- * Simple brute force implementation
- * Access to data file and return the result in a list
- */
+                            /**
+                             * Simple brute force implementation
+                             * Access to data file and return the result in a list
+                             */
 public class ReadSymptomFromDataFile implements ISymptomFromDateFile {
     private String filepath;
                             /**
-                             * @param filepath a full or partial path to file with symptom strings in it, one per line
+                             * @param filepath a full or partial path to file with symptom
+                             *                 strings in it, one per line
                              */
     public ReadSymptomFromDataFile(String filepath) {
         this.filepath = filepath;

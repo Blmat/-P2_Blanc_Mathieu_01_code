@@ -15,5 +15,4 @@ public interface ISymptomFromDateFile {
      * @return a listing of all Symptoms obtained from a data source, duplicates are possible
      */
     List<String>getSymptoms ();
-
 }

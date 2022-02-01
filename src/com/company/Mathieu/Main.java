@@ -13,8 +13,8 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        ReadSymptomFromDataFile symptomReader = new ReadSymptomFromDataFile("symptoms.txt");
-        List<String> symptoms = symptomReader.getSymptoms();
+        ReadSymptomFromDataFile readSymptomFromDataFile = new ReadSymptomFromDataFile("symptoms.txt");
+        List<String> symptoms = readSymptomFromDataFile.getSymptoms();
 
         CountSymptoms countSymptoms = new CountSymptoms();
         TreeMap<String, Integer> tSymptomsMap = countSymptoms.countSymptoms(symptoms);
