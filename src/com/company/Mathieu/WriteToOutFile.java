@@ -8,7 +8,6 @@ import java.util.TreeMap;
 
 public class WriteToOutFile implements IwriteOut {
     private String fileOut;
-
     public WriteToOutFile(String fileOut) {
         this.fileOut=fileOut;
     }
