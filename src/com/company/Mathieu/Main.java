@@ -20,6 +20,6 @@ public class Main {
         Map<String, Integer> tSymptomsMap = countSymptoms.countSymptoms(symptoms);
 
         IWriteOut writeOut = new WriteToOutFile("result.out");
-        writeOut.writeSymptoms(tSymptomsMap);
+        writeOut.writeSymptoms(tSymptomsMap)
     }
 }
